@@ -16,3 +16,4 @@ The node.js server I built myself for this app is also available [here](https://
 
 1. Download the files and open *iochat app.xcodeproj* with Xcode.
 2. Set the URL for your server in *SocketIOManager.swift*
+3. Run the app.
