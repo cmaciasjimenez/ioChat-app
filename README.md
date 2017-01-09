@@ -1,4 +1,4 @@
-# ioChatApp
+# ioChat-app
 Application for iOS and watchOS. You can send text messages and location coordinates between devices through Socket.io.
 
 # Description
