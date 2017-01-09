@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+    </dependencies>
+    <scenes>
+        <!--Home Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller hidesWhenLoading="NO" id="AgC-eL-Hgc" customClass="HomeInterfaceController" customModule="iochat_app_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="2a3-e1-JQg">
+                            <items>
+                                <group width="1" alignment="center" verticalAlignment="center" layout="vertical" id="hu3-cm-8dI">
+                                    <items>
+                                        <button width="1" alignment="left" title="Chat" id="vNz-DE-p7p">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.0" green="0.96078431372549022" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="15"/>
+                                            <connections>
+                                                <action selector="chatButtonPressed" destination="AgC-eL-Hgc" id="nxb-0w-NBD"/>
+                                                <segue destination="YX6-h6-kHS" kind="push" identifier="" id="ydr-Mf-iAN"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" alignment="left" title="Users" id="baV-TK-Yug">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="userButtonPressed" destination="AgC-eL-Hgc" id="eFl-fB-byq"/>
+                                                <segue destination="dtD-Qr-SB7" kind="push" id="Pny-RN-OBV"/>
+                                            </connections>
+                                        </button>
+                                        <button width="1" alignment="left" title="Location" id="B7t-sU-udE">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="font" type="system" pointSize="15"/>
+                                            <connections>
+                                                <action selector="locationButtonPressed" destination="AgC-eL-Hgc" id="7vn-Rh-R3M"/>
+                                                <segue destination="tZy-O1-F0b" kind="push" id="ZU2-Zb-Hhi"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="32" y="371"/>
+        </scene>
+        <!--Location Interface Controller-->
+        <scene sceneID="Dmi-jE-q8v">
+            <objects>
+                <controller id="tZy-O1-F0b" customClass="LocationInterfaceController" customModule="iochat_app_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="center" layout="vertical" id="zce-aJ-WoX">
+                            <items>
+                                <map height="100" alignment="center" id="6Sg-vW-2f5"/>
+                                <button alignment="center" id="tLn-2c-fhg">
+                                    <group key="contentGroup" width="1" height="35" alignment="left" id="nap-1k-Pvr">
+                                        <items>
+                                            <label alignment="center" verticalAlignment="center" text="Send location" id="7vo-qc-nWR">
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                            </label>
+                                            <imageView width="25" height="25" alignment="left" verticalAlignment="center" image="pin" id="3yi-aA-NZ5"/>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="sendLocationButtonPressed" destination="tZy-O1-F0b" id="Cki-yq-vVo"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <menu key="menu" id="BG6-Kn-pfU">
+                        <items>
+                            <menuItem title="Remove Pins" icon="trash" id="3x6-Lm-4Jx">
+                                <connections>
+                                    <action selector="removePinsMenuItem" destination="tZy-O1-F0b" id="k3R-Tk-CU2"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="map" destination="6Sg-vW-2f5" id="RDQ-Lg-Rng"/>
+                        <outlet property="sendLocationButtonLabel" destination="7vo-qc-nWR" id="joR-QA-8js"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="656"/>
+        </scene>
+        <!-- -->
+        <scene sceneID="QNA-sW-XZN">
+            <objects>
+                <controller identifier="welcomeInterface" title=" " id="NSD-0T-TFE" customClass="LoggedAsInterfaceController" customModule="iochat_app_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="center" verticalAlignment="center" id="jbG-ss-Egr">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Logged as" textAlignment="center" numberOfLines="0" id="DSJ-7h-0GL">
+                                    <fontDescription key="font" type="system" weight="semibold" pointSize="20"/>
+                                </label>
+                            </items>
+                            <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="userLabel" destination="DSJ-7h-0GL" id="knW-LN-sYF"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="32" y="84"/>
+        </scene>
+        <!--User List Interface Controller-->
+        <scene sceneID="qxe-NB-fFo">
+            <objects>
+                <controller id="dtD-Qr-SB7" customClass="UserListInterfaceController" customModule="iochat_app_WatchKit_Extension">
+                    <items>
+                        <table alignment="left" id="TX4-kc-vRe">
+                            <items>
+                                <tableRow identifier="UserRowType" id="eHx-iv-Ymg" customClass="UserRowController" customModule="iochat_app_WatchKit_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="Kz2-AY-d8Q">
+                                        <items>
+                                            <label alignment="left" verticalAlignment="center" text="Username" id="nkm-yq-OBX">
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="userLabel" destination="nkm-yq-OBX" id="UeH-n9-ANF"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="userListTable" destination="TX4-kc-vRe" id="RHU-cA-GhO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="371"/>
+        </scene>
+        <!--ChatScreen-->
+        <scene sceneID="faq-F3-8sm">
+            <objects>
+                <controller identifier="ChatScreen" id="YX6-h6-kHS" customClass="ChatInterfaceController" customModule="iochat_app_WatchKit_Extension">
+                    <items>
+                        <group width="1" alignment="left" spacing="4" id="kka-7t-pKW">
+                            <items>
+                                <button alignment="left" verticalAlignment="center" id="ZP0-JU-5Fc">
+                                    <group key="contentGroup" width="0.5" height="40" alignment="left" id="ESq-Ty-4eI">
+                                        <items>
+                                            <imageView width="35" height="35" alignment="center" verticalAlignment="center" image="mic" id="Ezg-7p-M98"/>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="audioButtonPressed" destination="YX6-h6-kHS" id="vP9-gR-A3b"/>
+                                    </connections>
+                                </button>
+                                <button alignment="right" id="j8T-ag-ZR1">
+                                    <group key="contentGroup" width="0.5" height="40" alignment="left" id="3cs-YO-xKP">
+                                        <items>
+                                            <imageView width="30" height="30" alignment="center" verticalAlignment="center" image="emoji" id="dCd-Bk-cd5"/>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <action selector="emojiButtonPressed" destination="YX6-h6-kHS" id="LXz-de-9ge"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <table alignment="left" id="rJf-Ix-JVD">
+                            <items>
+                                <tableRow identifier="MessageRowType" id="biI-sV-lrf" customClass="MessageRowController" customModule="iochat_app_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="0.0" alignment="left" layout="vertical" id="wpo-a1-NDZ">
+                                        <items>
+                                            <label alignment="left" text="Username" id="ogD-Y0-DxZ">
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                            <label alignment="left" text="Message" numberOfLines="0" id="a9d-bE-TcV">
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                                            </label>
+                                        </items>
+                                        <color key="backgroundColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="messageLabel" destination="a9d-bE-TcV" id="UWB-Ln-WW2"/>
+                                        <outlet property="usernameLabel" destination="ogD-Y0-DxZ" id="ZE8-bf-knR"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <menu key="menu" id="a20-7O-HCw">
+                        <items>
+                            <menuItem title="Clear messages" icon="trash" id="ubv-JR-TdF">
+                                <connections>
+                                    <action selector="clearMessagesMenuItem" destination="YX6-h6-kHS" id="lPW-6h-ASV"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="chatTable" destination="rJf-Ix-JVD" id="WPX-f9-jiJ"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="399" y="84"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.0" green="0.96078431369999995" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+</document>

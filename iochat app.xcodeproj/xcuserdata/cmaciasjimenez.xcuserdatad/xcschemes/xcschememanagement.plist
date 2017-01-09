@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>iochat app WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>iochat app.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>A33E8B1A1DF716C100292883</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A33E8B2E1DF716C200292883</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A33E8B391DF716C200292883</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A33E8B421DF716C200292883</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
